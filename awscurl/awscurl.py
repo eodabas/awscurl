@@ -235,7 +235,7 @@ def __send_request(uri, data, headers, method):
     __log('\nBEGIN REQUEST++++++++++++++++++++++++++++++++++++')
     __log('Request URL = ' + uri)
 
-    r = requests.request(method, uri, headers=headers, data=data)
+    r = requests.request(method, uri, headers=headers, data=data, timeout=350)
 
     __log('\nRESPONSE++++++++++++++++++++++++++++++++++++')
     __log('Response code: %d\n' % r.status_code)
